@@ -7,7 +7,10 @@
 	<link rel="stylesheet" href="style.css" class="css"/>
 </head>
 
-<body>
+<body style="background-image: url('bg_bus.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover">
 	<div class="container">
 	<div class="main-content">
 		<p class="text">Payment</p>

@@ -1,0 +1,22 @@
+body {
+    background-color: #484848;
+    margin: 0;
+    padding: 20;
+}
+
+.nadu {
+    color: #000000;
+    text-align: center;
+    font-family: "SIMPSON";
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+table {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}

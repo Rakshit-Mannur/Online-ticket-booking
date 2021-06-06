@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  color: #444;
+}
+
+.btn1 {
+  padding: 1em 2.1em 1.1em;
+  border-radius: 3px;
+  margin: 8px 8px 8px 8px;
+  color: #fbdedb;
+  background-color: #fbdedb;
+  display: inline-block;
+  background: #03c0b5;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+  position: relative;
+}
+.btn1:hover,
+.btn1:focus {
+  opacity: 0.8;
+}
+.btn1:active {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.btn1.block {
+  display: block !important;
+}
+.btn1.circular {
+  border-radius: 50em !important;
+}
+/* 
+.groove {
+  border-style: groove;
+  margin-left: 50px;
+  margin-right: 50px;
+} */
+/* 
+div {
+  margin-top: 0px;
+  margin-bottom: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+} */
+
+@media (max-width: 1000px) {
+  div.groove {
+    padding: 10px 0px 25px 30px;
+    border-style: groove;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 15px 15px 15px 15px;
+  }
+}
+
+footer {
+  background-color: black;
+  color: antiquewhite;
+  margin-bottom: auto;
+}
+/* @media (max-width: 1000px) {
+  form.input {
+    height: 50px;
+    width: 500px;
+  }
+} */

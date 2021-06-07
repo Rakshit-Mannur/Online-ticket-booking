@@ -43,7 +43,9 @@
 	left: 0;
 	right: 0;
   	margin: auto">
-   <h2 style="text-align:center;font-family:tahoma;color:white">Select your slot</h2>
+   <h2 style="text-align:center;font-family:tahoma;color:white;margin-top: 20px">Select your slot</h2>
+
+   
    <div style="text-align: center;">
         <input type="radio" id="time" name="time" value="male">
         <label for="male" style="color: white;">9:00 pm</label>
@@ -52,7 +54,10 @@
         <input type="radio" id="time" name="time" value="other" style="margin-left: 20px;">
         <label for="other" style="color: white;">10:00 pm</label> 
         <br/>
-        <input type="submit" value="Proceed to payment" id="submit" name="submit" style="margin-top: 30px;" formaction="/payment.php">
+        <form>
+        <button formaction="/starks/payment.php" class="btn btn-dark" style="margin-top: 20px;margin-left: 10px;">Proceed to payment</button>
+        </form>
+
     </div>
 </div>
 </body>

@@ -33,12 +33,16 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#routes">Routes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#status">Status</a></li>
+<
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html#routes">Routes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/services/index.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/status/index.html">Status</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/login.php">Login</a></li>
+
+                    
+
                 </ul>
             </div>
         </div>
@@ -51,8 +55,12 @@
         <div class="sap_tabs">
             <div id="horizontalTab">
                 <ul class="resp-tabs-list">
-                    <li class="resp-tab-item"><span>Round Trip</span></li>
-                    <li class="resp-tab-item"><span>One way</span></li>
+
+                    <li class="resp-tab-item" style="color: black;"><span>Journey details</span></li>
+                   
+
+                   
+
                 </ul>
                 <div class="clearfix"> </div>
                 <div class="resp-tabs-container">
@@ -60,7 +68,9 @@
                         <form action="confirm.php" method="post">
                             <div class="from">
                                 <h4>From</h4>
-                                <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required" name="from">
+                                <select id="w3_country2" onchange="change_country(this.value)" class="frm-field required" name="from">
+
+                               
 									<option>Bagalkot</option>  
 									<option>Bangalore</option>   
 									<option>Mysore</option>   
@@ -89,7 +99,10 @@
                             </div>
                             <div class="class">
                                 <h4>Class</h4>
-                                <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required" name="class">
+ 
+                                <select id="w3_country2" onchange="change_country(this.value)" class="frm-field required" name="class">
+
+                                
 									<option>Economy</option>  
 									<option>Premium Economy</option>   
 									<option>Business</option>   
@@ -99,83 +112,17 @@
                             <div class="clear"></div>
                             <div class="from">
                                 <h4>Age</h4>
-                                <input type="text" name="age" class="city1" required="" style="width: 60px;">
+                                <input type="text" name="age" class="city2" required="" style="width: 60px;">
                             </div>
                             <div class="clear"></div>
-                            <input type="submit" value="Search bus" id="submit" name="submit">
+                            <div style="text-align: center;">
+                                <input type="submit" value="Search bus" id="submit" name="submit" style="color: black;">
+                            </div>
                         </form>
                     </div>
-                    <!-- <div class="tab-1 resp-tab-content oneway">
-                        <form action="#" method="post">
-                            <div class="from">
-                                <h4>From</h4>
-                                <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-									<option value="null">Bagalkot</option>  
-									<option value="null">Bangalore</option>   
-									<option value="null">Mysore</option>   
-									<option value="null">Bijapur</option>   		
-									<option value="null">Hubli</option>  				
-								</select>
-                            </div>
-                            <div class="to">
-                                <h4>To</h4>
-                                <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-									<option value="null">Bagalkot</option>  
-									<option value="null">Bangalore</option>   
-									<option value="null">Mysore</option>   
-									<option value="null">Bijapur</option>   		
-									<option value="null">Hubli</option>  				
-								</select>
-                            </div>
-                            <div class="clear"></div>
-                            <div class="date">
-                                <div class="depart">
-                                    <h4>Depart</h4>
-                                    <input class="date" id="datepicker2" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-                                    <span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
-                                </div>
-                            </div>
-                            <div class="class">
-                                <h4>Class</h4>
-                                <select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-									<option value="null">Economy</option>  
-									<option value="null">Premium Economy</option>   
-									<option value="null">Business</option>   
-									<option value="null">First class</option>   						
-								</select>
+                   
 
-                            </div>
-                            <div class="clear"></div>
-                            <div class="numofppl">
-                                <div class="adults">
-                                    <h6>Adult:(12+ yrs)</h6>
-                                    <div class="quantity">
-                                        <div class="quantity-select">
-                                            <div class="entry value-minus">&nbsp;</div>
-                                            <div class="entry value"><span>1</span></div>
-                                            <div class="entry value-plus active">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="child">
-                                    <h6>Child:(2-11 yrs)</h6>
-                                    <div class="quantity">
-                                        <div class="quantity-select">
-                                            <div class="entry value-minus">&nbsp;</div>
-                                            <div class="entry value"><span>1</span></div>
-                                            <div class="entry value-plus active">&nbsp;</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="clear"></div>
-                            <input type="submit" value="Search bus">
-                        </form>
-
-                    </div> -->
+                                
 
                 </div>
             </div>
@@ -292,12 +239,6 @@
     </script>
     <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script> -->
 
 </body>
 

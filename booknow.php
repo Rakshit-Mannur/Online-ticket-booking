@@ -33,12 +33,16 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
+<
                     <li class="nav-item"><a class="nav-link" href="/starks/home/home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/home/home.html#routes">Routes</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/services/index.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/status/index.html">Status</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/login.php">Login</a></li>
+
+                    
+
                 </ul>
             </div>
         </div>
@@ -51,8 +55,12 @@
         <div class="sap_tabs">
             <div id="horizontalTab">
                 <ul class="resp-tabs-list">
+
                     <li class="resp-tab-item" style="color: black;"><span>Journey details</span></li>
                    
+
+                   
+
                 </ul>
                 <div class="clearfix"> </div>
                 <div class="resp-tabs-container">
@@ -61,6 +69,8 @@
                             <div class="from">
                                 <h4>From</h4>
                                 <select id="w3_country2" onchange="change_country(this.value)" class="frm-field required" name="from">
+
+                               
 									<option>Bagalkot</option>  
 									<option>Bangalore</option>   
 									<option>Mysore</option>   
@@ -89,7 +99,10 @@
                             </div>
                             <div class="class">
                                 <h4>Class</h4>
+ 
                                 <select id="w3_country2" onchange="change_country(this.value)" class="frm-field required" name="class">
+
+                                
 									<option>Economy</option>  
 									<option>Premium Economy</option>   
 									<option>Business</option>   
@@ -108,6 +121,8 @@
                         </form>
                     </div>
                    
+
+                                
 
                 </div>
             </div>

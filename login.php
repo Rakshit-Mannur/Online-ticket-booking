@@ -153,25 +153,25 @@ left: -350px;
 <button type="submit" class="submit-btn">Log in</button>
 </form>
 
-<form id="register" class="input-group">
+<form action="database.php" id="register" class="input-group" method="POST">
 
 <!-- <input type="text" class="input-field" placeholder="firstname" required><br>
 
 <input type="text" class="input-field" placeholder="lastname" required><br> -->
 
-<input type="text" class="input-field" placeholder="User name" required><br>
+<input type="text" class="input-field" placeholder="User name" name="name" required><br>
 
-<input type="Phone" class="input-field" placeholder="Phone Number" required><br>
+<input type="Phone" class="input-field" placeholder="Phone Number" name="phone" required><br>
 
-<input type="email" class="input-field" placeholder="Email" required><br>
+<input type="email" class="input-field" placeholder="Email" name="email" required><br>
 
-<input type="password" class="input-field" id="psw_1" placeholder="Enter Password" name="password_1" required>
+<input type="password" class="input-field" id="psw_1" placeholder="Enter Password" name="password" required>
 <span id="message"></span>
-<input type="password" class="input-field" id="psw_2" placeholder="confirm password" name="password_2" required><br>
+<input type="password" class="input-field" id="psw_2" placeholder="confirm password" name="confirmPassword" required><br>
 <span id="message1"></span>
 
 <!-- <input type="text" class="input-field" placeholder="OTP" required> -->
-<button type="submit" class="submit-btn">Register</button>
+<button type="submit" class="submit-btn" name="submit" id="submit">Register</button>
 </form>
 <form id="forget-password" class="input-group">
 

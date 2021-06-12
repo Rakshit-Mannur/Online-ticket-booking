@@ -44,6 +44,8 @@
 	right: 0;
   	margin: auto">
    <h2 style="text-align:center;font-family:tahoma;color:white;margin-top: 20px">Select your slot</h2>
+
+   
    <div style="text-align: center;">
         <input type="radio" id="time" name="time" value="male">
         <label for="male" style="color: white;">9:00 pm</label>
@@ -55,6 +57,7 @@
         <form>
         <button formaction="/starks/payment.php" class="btn btn-dark" style="margin-top: 20px;margin-left: 10px;">Proceed to payment</button>
         </form>
+
     </div>
 </div>
 </body>

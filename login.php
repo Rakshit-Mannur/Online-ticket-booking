@@ -155,10 +155,6 @@ left: -350px;
 
 <form action="database.php" id="register" class="input-group" method="POST">
 
-<!-- <input type="text" class="input-field" placeholder="firstname" required><br>
-
-<input type="text" class="input-field" placeholder="lastname" required><br> -->
-
 <input type="text" class="input-field" placeholder="User name" name="name" required><br>
 
 <input type="Phone" class="input-field" placeholder="Phone Number" name="phone" required><br>
@@ -170,7 +166,7 @@ left: -350px;
 <input type="password" class="input-field" id="psw_2" placeholder="confirm password" name="confirmPassword" required><br>
 <span id="message1"></span>
 
-<!-- <input type="text" class="input-field" placeholder="OTP" required> -->
+
 <button type="submit" class="submit-btn" name="submit" id="submit">Register</button>
 </form>
 <form id="forget-password" class="input-group">
@@ -213,7 +209,6 @@ p.style.left = "50px";
 
 }
 
-//Function to check whether both passwords are same or not..?
 
 </script>
 

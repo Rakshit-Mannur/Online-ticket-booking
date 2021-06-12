@@ -28,10 +28,15 @@
          $email =  $_POST['email'];
          $password =  $_POST['password'];
          $confirmPassword =  $_POST['confirmPassword'];
+        
+
 
          if ($_POST["password"] === $_POST["confirmPassword"]) 
          {
-            $sql="INSERT INTO signup (name,phone,email,password,confirmPassword) values('$name','$phone','$email','$password','$confirmPassword')";
+            $encPass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $encCon = password_hash($_POST['confirmPassword'], PASSWORD_DEFAULT);
+
+            $sql="INSERT INTO signup (name,phone,email,password,confirmPassword,encPass,encCon) values('$name','$phone','$email','$password','$confirmPassword','$encPass','$encCon')";
 
             if(mysqli_query($conn,$sql))
             {
@@ -46,11 +51,7 @@
             echo 'Passwords mismatched :(';
          }
 
-
-
-         
-
-         mysqli_close($conn);
+        mysqli_close($conn);
        }
     ?>
     

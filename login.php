@@ -166,9 +166,9 @@ left: -350px;
 <input type="password" class="input-field" id="psw_2" placeholder="confirm password" name="confirmPassword" required><br>
 <span id="message1"></span>
 
-
 <button type="submit" class="submit-btn" name="submit" id="submit">Register</button>
 </form>
+
 <form id="forget-password" class="input-group">
 
 <input type="text" class="input-field" placeholder="Phone Number" required><br>

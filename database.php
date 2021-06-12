@@ -27,16 +27,13 @@
          $phone = $_POST['phone'];
          $email =  $_POST['email'];
          $password =  $_POST['password'];
-         $confirmPassword =  $_POST['confirmPassword'];
         
-
-
-         if ($_POST["password"] === $_POST["confirmPassword"]) 
+          if ($_POST["password"] === $_POST["confirmPassword"]) 
          {
             $encPass = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $encCon = password_hash($_POST['confirmPassword'], PASSWORD_DEFAULT);
 
-            $sql="INSERT INTO signup (name,phone,email,password,confirmPassword,encPass,encCon) values('$name','$phone','$email','$password','$confirmPassword','$encPass','$encCon')";
+            $sql="INSERT INTO signup (name,phone,email,encPass) values('$name','$phone','$email','$encPass')";
 
             if(mysqli_query($conn,$sql))
             {

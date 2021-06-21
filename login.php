@@ -160,16 +160,18 @@ left: -350px;
 
 <input type="text" class="input-field" placeholder="User name" name="name" required><br>
 
-<input type="Phone" class="input-field" placeholder="Phone Number" name="phone" required><br>
+<input type="Phone" class="input-field" placeholder="Phone number" name="phone" required><br>
 
 <input type="email" class="input-field" placeholder="Email" name="email" required><br>
 
-<input type="password" class="input-field" id="psw_1" placeholder="Enter Password" name="password" required>
+<input type="password" class="input-field" id="psw_1" placeholder="Enter password" name="password" required>
 <span id="message"></span>
-<input type="password" class="input-field" id="psw_2" placeholder="confirm password" name="confirmPassword" required><br>
+<input type="password" class="input-field" id="psw_2" placeholder="Confirm password" name="confirmPassword" required><br>
 <span id="message1"></span>
 
-<button type="submit" class="submit-btn" name="submit" id="submit">Register</button>
+<button type="submit" class="submit-btn" name="submit" id="submit" onclick="location.reload()">Register</button><br><br>
+
+<p id="f"><a href="/starks/driver.php">Are you a driver ?</a></p>
 </form>
 
 <form id="forget-password" class="input-group">

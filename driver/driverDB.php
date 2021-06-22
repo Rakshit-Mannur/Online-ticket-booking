@@ -22,10 +22,10 @@
 
             if(isset($_POST['submit']))
             {
-            $name =  $_POST['driverName'];
+            $driverName =  $_POST['driverName'];
             $email =  $_POST['email'];
-            $phone = $_POST['age'];
-            $password =  $_POST['address'];
+            $age = $_POST['age'];
+            $address =  $_POST['address'];
            
             
             

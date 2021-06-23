@@ -167,9 +167,8 @@ left: -350px;
 	<input type="password" class="input-field" id="psw_2" placeholder="Confirm password" name="confirmPassword" required><br>
 	<span id="message1"></span>
 
-	<button type="submit" class="submit-btn" name="submit" id="submit" onclick="location.reload()">Register</button><br><br>
+	<button type="submit" class="submit-btn" name="submit" id="submit" onclick="location.reload()" formaction="/starks/home/home.php">Register</button><br><br>
 
-	<p id="f"><a href="/starks/driver.php">Are you a driver ?</a></p>
 </form>
 
 <form id="forget-password" class="input-group">

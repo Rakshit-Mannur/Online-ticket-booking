@@ -15,6 +15,28 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+   <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0082e6;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 1px;
+            z-index: 1;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            }
+   </style>
+
 </head>
 
 <body>
@@ -28,8 +50,8 @@
             <img src="images/logo.jpeg" alt="logo" class="logo">
 
             <ul>
-                <li><a href="/starks/logout.php" class="active">Logout</a></li>
-                <li><a href="home.html" class="active">Home</a></li>
+              
+                <li><a href="home.php" class="active">Home</a></li>
                 <li><a href="#routes" class="active">Routes</a></li>
                 <li><a href="/starks/services/index.html" class="active">Services</a></li>
                 <li><a href="/starks/status/index.html" class="active">Status</a></li>
@@ -45,7 +67,19 @@
                 else
                  {
             ?>
-                  <li><a href="/starks/login.php" class="active"><?php echo $_SESSION["fullname"] ?></a></li>
+                 
+                    <div class="dropdown">
+                        <span> <li><a href="/starks/login.php" class="active"><?php echo $_SESSION["fullname"] ?></a></li></span>
+                            <div class="dropdown-content">
+                              <a href="#" style="color: white; padding: 10px" class="active">Profile</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Travel history</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Privacy policy</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">About us</a><br>      
+                              <a href="/starks/logout.php" style="color: white; padding: 10px" class="active">Logout</a>
+                            
+                            </div>
+                    </div>
+                  
             <?php 
                  }
             ?>

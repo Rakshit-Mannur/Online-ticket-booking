@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
 <
-                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/home/home.html#routes">Routes</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/services/index.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/status/index.html">Status</a></li>

@@ -53,8 +53,8 @@
               
                 <li><a href="home.php" class="active">Home</a></li>
                 <li><a href="#routes" class="active">Routes</a></li>
-                <li><a href="/starks/services/index.html" class="active">Services</a></li>
-                <li><a href="/starks/status/index.html" class="active">Status</a></li>
+                <li><a href="/starks/services/index.php" class="active">Services</a></li>
+                <li><a href="/starks/status/index.php" class="active">Status</a></li>
                 <li><a href="#contactUs" class="active">Contact Us</a></li>
             <?php 
                 if(!isset($_SESSION["fullname"]) || empty($_SESSION["fullname"])) 

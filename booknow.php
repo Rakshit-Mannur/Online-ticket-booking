@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -23,6 +27,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style> 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0082e6;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 1px;
+            z-index: 1;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            }
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -35,11 +61,39 @@
                 <ul class="navbar-nav ms-auto">
 <
                     <li class="nav-item"><a class="nav-link" href="/starks/home/home.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html#routes">Routes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/services/index.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/status/index.html">Status</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.php#routes">Routes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/services/index.php">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/status/index.php">Status</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/login.php">Login</a></li>
+                    
+
+                    <?php 
+                        if(!isset($_SESSION["fullname"]) || empty($_SESSION["fullname"])) 
+                        {
+                    ?>
+                    <li><a href="/starks/login.php" class="active">Login</a></li>
+
+                    <?php 
+                        }
+                        else
+                        {
+                    ?>
+                 
+                    <div class="dropdown">
+                        <span> <li><a href="/starks/login.php" class="active"><?php echo $_SESSION["fullname"] ?></a></li></span>
+                            <div class="dropdown-content">
+                              <a href="#" style="color: white; padding: 10px" class="active">Profile</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Travel history</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Privacy policy</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">About us</a><br>      
+                              <a href="/starks/logout.php" style="color: white; padding: 10px" class="active">Logout</a>
+                            
+                            </div>
+                    </div>
+                  
+                    <?php 
+                        }
+                    ?>
 
                     
 

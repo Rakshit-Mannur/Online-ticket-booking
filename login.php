@@ -147,8 +147,8 @@ left: -350px;
 </div>
 
 <form id="login" class="input-group">
-<input type="text" class="input-field" placeholder="User name" required><br>
-<input type="text" class="input-field" placeholder="Enter Password" required>
+<input type="text" class="input-field" placeholder="Username" required><br>
+<input type="text" class="input-field" placeholder="Enter password" required>
 <input type="checkbox" class="check-box">Remember Password
 <p id="f" onclick="forget()"><a href=""> Forget Password? </a></p>
 <button type="submit" class="submit-btn">Log in</button>
@@ -156,7 +156,7 @@ left: -350px;
 
 <form action="database.php" id="register" class="input-group" method="POST">
 
-	<input type="text" class="input-field" placeholder="User name" name="name" required><br>
+	<input type="text" class="input-field" placeholder="Username" name="name" required><br>
 
 	<input type="Phone" class="input-field" placeholder="Phone number" name="phone" required><br>
 
@@ -167,7 +167,7 @@ left: -350px;
 	<input type="password" class="input-field" id="psw_2" placeholder="Confirm password" name="confirmPassword" required><br>
 	<span id="message1"></span>
 
-	<button type="submit" class="submit-btn" name="submit" id="submit" onclick="location.reload()" formaction="/starks/home/home.php">Register</button><br><br>
+	<button type="submit" class="submit-btn" name="submit" id="submit" onclick="location.reload()">Register</button><br><br>
 
 </form>
 

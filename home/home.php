@@ -28,11 +28,12 @@
             <img src="images/logo.jpeg" alt="logo" class="logo">
 
             <ul>
+                <li><a href="/starks/logout.php" class="active">Logout</a></li>
                 <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="#routes" class="active">Routes</a></li>
                 <li><a href="/starks/services/index.html" class="active">Services</a></li>
                 <li><a href="/starks/status/index.html" class="active">Status</a></li>
-                <li><a href="#" class="active">Contact Us</a></li>
+                <li><a href="#contactUs" class="active">Contact Us</a></li>
             <?php 
                 if(!isset($_SESSION["fullname"]) || empty($_SESSION["fullname"])) 
                 {
@@ -201,7 +202,7 @@
     <br><br>
 
     <!-- footer content  -->
-    <footer class="ftco-footer ftco-section">
+    <footer class="ftco-footer ftco-section" id="contactUs">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md">

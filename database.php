@@ -1,3 +1,7 @@
+<?php
+   session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +42,7 @@
             if(mysqli_query($conn,$sql))
             {
                echo 'You are registered successfully !';
+               $_SESSION["fullname"]=$name;
             }
             else
             {

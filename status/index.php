@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +36,25 @@
                 margin-left: auto !important;
             }
         }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0082e6;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 1px;
+            z-index: 1;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            }
     </style>
 
 
@@ -46,12 +69,41 @@
 					class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav" style="margin-left: 650px;">
-                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html" style="text-decoration: none;">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html#routes" style="text-decoration: none;">Routes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/services/index.html" style="text-decoration: none;">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/status/index.html" style="text-decoration: none;">Status</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.php" style="text-decoration: none;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.php#routes" style="text-decoration: none;">Routes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/services/index.php" style="text-decoration: none;">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/status/index.php" style="text-decoration: none;">Status</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contactUs" style="text-decoration: none;">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/starks/login.php" style="text-decoration: none;">Login</a></li>
+                   
+                    <?php 
+                        if(!isset($_SESSION["fullname"]) || empty($_SESSION["fullname"])) 
+                        {
+                    ?>
+                    <li><a href="/starks/login.php" class="active">Login</a></li>
+
+                    <?php 
+                        }
+                        else
+                        {
+                    ?>
+                 
+                    <div class="dropdown">
+                        <span> <li><a href="/starks/login.php" class="active"><?php echo $_SESSION["fullname"] ?></a></li></span>
+                            <div class="dropdown-content">
+                              <a href="#" style="color: white; padding: 10px" class="active">Profile</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Travel history</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Privacy policy</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">About us</a><br>      
+                              <a href="/starks/logout.php" style="color: white; padding: 10px" class="active">Logout</a>
+                            
+                            </div>
+                    </div>
+                  
+                    <?php 
+                        }
+                    ?>
+                
                 </ul>
             </div>
         </div>

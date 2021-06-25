@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,28 +13,81 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="home.css">
     <script src="js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+   <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #0082e6;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 1px;
+            z-index: 1;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            }
+   </style>
+
 </head>
 
 <body>
 
     <header>
         <div class="menu-toggle"></div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container px-4">
-                <img src="images/l1.jpeg" alt="logo" class="logo">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/starks/home/home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/starks/home/home.html#routes">Routes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/starks/services/index.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/starks/status/index.html">Status</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contactUs">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/starks/login.php">Login</a></li>
-                    </ul>
-                </div>
-            </div>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">lll</label>
+
+            <img src="images/logo.jpeg" alt="logo" class="logo">
+
+            <ul>
+              
+                <li><a href="home.php" class="active">Home</a></li>
+                <li><a href="#routes" class="active">Routes</a></li>
+                <li><a href="/starks/services/index.php" class="active">Services</a></li>
+                <li><a href="/starks/status/index.php" class="active">Status</a></li>
+                <li><a href="#contactUs" class="active">Contact Us</a></li>
+            <?php 
+                if(!isset($_SESSION["fullname"]) || empty($_SESSION["fullname"])) 
+                {
+            ?>
+                 <li><a href="/starks/login.php" class="active">Login</a></li>
+
+            <?php 
+                }
+                else
+                 {
+            ?>
+                 
+                    <div class="dropdown">
+                        <span> <li><a href="/starks/login.php" class="active"><?php echo $_SESSION["fullname"] ?></a></li></span>
+                            <div class="dropdown-content">
+                              <a href="#" style="color: white; padding: 10px" class="active">Profile</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Travel history</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">Privacy policy</a><br>
+                              <a href="#" style="color: white; padding: 10px" class="active">About us</a><br>      
+                              <a href="/starks/logout.php" style="color: white; padding: 10px" class="active">Logout</a>
+                            
+                            </div>
+                    </div>
+                  
+            <?php 
+                 }
+            ?>
+                 
+             
+            
+               
+            </ul>
         </nav>
         <!-- nav bar ended -->
 
@@ -51,7 +108,7 @@
         </div>
         <p></p>
         <div class="btn">
-            <button class="btn btn-success"><a href="/starks/services/index.html">Services</a></button>
+            <button class="btn btn-success"><a href="/starks/services/index.php">Services</a></button>
             <button class="btn btn-success"><a href="/starks/booknow.php">Book now</a> </button>
         </div>
     </div>
@@ -60,7 +117,7 @@
     <div class="bgco" style="margin-top: -150px;" id="routes">
         <div class="jumbotron">
             <label for="Departure date and time"><b> DATE AND TIME :</b></label><br>
-            <input type="datetime-local" class="form-control">
+            <input type="datetime-local" value="2021-06-01T00:00:00" class="form-control">
 
             <label for="from"><b>PICK UP LOCATION :</b></label><br>
             <input type="text" class="form-control" placeholder="From">
@@ -69,7 +126,7 @@
             <input type="text" class="form-control" placeholder="To" style="margin-right: 40px;">
 
             <!-- <label for="To"><b> HOW MANY :</b></label><br>
-            <input type="number" class="form-control" placeholder="how many members"> -->
+  <input type="number" class="form-control" placeholder="how many members"> -->
         </div>
         <div class="search">
             <button class="btn btn-primary" id="search">Search</button>
@@ -82,7 +139,7 @@
         <div class="container my-6" style="width: 100%; padding-left: 50px;">
             <section>
                 <div class="text-center mb-5 col-md-10 mx-auto" style="margin-top: -40px;">
-                    <h2 class="font-weight-bold display-4 text-capitalize">Our offers</h2>
+                    <h2 class="font-weight-bold display-4 text-capitalize">Our Services</h2>
                 </div>
                 <hr color="white">
                 <h3 class="font-weight-bold">Special Offers:</h3><br>
@@ -216,8 +273,8 @@
                             <ul>
                                 <li><span class="icon icon-map-marker"></span><span class="text">Bangalore, India</span></li>
                                 <li><a href="tel: +91-6718374964"><span class="icon icon-phone"></span><span class="text">+91-6718374964</span></a></li>
-                                <li><a href="mailto: abcde@gmail.com"><span class="icon icon-envelope"></span><span class="text">abcde@gmail.com</span></a></li>
-                                <li><a href="/starks/driver.php"><span class="icon icon-envelope"></span><span class="text">Are you a driver ?</span></a></li>
+                                <li><a href="mailto: abcde@gmail.com"><span class="icon icon-envelope"></span><span class="text">abcde@gmail.com</span></a></li><br>
+                                <li><a href="/starks/driver/index.html"><span class="icon icon-envelope"></span><span class="text">Are you a driver ?</span></a></li>
                             </ul>
                         </div>
                     </div>

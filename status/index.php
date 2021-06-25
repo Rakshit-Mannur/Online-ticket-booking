@@ -69,6 +69,7 @@
 					class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav" style="margin-left: 650px;">
+<<<<<<< HEAD:status/index.php
                     <li class="nav-item"><a class="nav-link" href="/starks/home/home.php" style="text-decoration: none;">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/home/home.php#routes" style="text-decoration: none;">Routes</a></li>
                     <li class="nav-item"><a class="nav-link" href="/starks/services/index.php" style="text-decoration: none;">Services</a></li>
@@ -103,6 +104,14 @@
                         }
                     ?>
 
+=======
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html" style="text-decoration: none;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/home/home.html#routes" style="text-decoration: none;">Routes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/services/index.html" style="text-decoration: none;">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/status/index.html" style="text-decoration: none;">Status</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contactUs" style="text-decoration: none;">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/starks/login.php" style="text-decoration: none;">Login</a></li>
+>>>>>>> 30e4e06a8f2ff322a3aeda2c04aed3059a5b26bc:status/index.html
                 </ul>
             </div>
         </div>

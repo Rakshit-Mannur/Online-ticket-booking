@@ -23,8 +23,8 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #0082e6;
-            min-width: 120px;
+            background-color: #495057;
+            min-width: 180px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             padding: 1px;
             z-index: 1;
@@ -64,7 +64,7 @@
                 ?>
                  
                     <div class="dropdown">
-                        <span> <li><a href="/starks/login.php" class="active"><?php echo $_SESSION["fullname"] ?></a></li></span>
+                        <span> <li><a href="/starks/login.php" class="active" style="color: white; padding: 10px"><?php echo $_SESSION["fullname"] ?></a></li></span>
                             <div class="dropdown-content">
                               <a href="#" style="color: white; padding: 10px" class="active">Profile</a><br>
                               <a href="#" style="color: white; padding: 10px" class="active">Travel history</a><br>

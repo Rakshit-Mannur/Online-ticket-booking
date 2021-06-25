@@ -26,7 +26,7 @@
             display: none;
             position: absolute;
             background-color: #0082e6;
-            min-width: 120px;
+            min-width: 180px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             padding: 1px;
             z-index: 1;
@@ -108,7 +108,7 @@
         </div>
         <p></p>
         <div class="btn">
-            <button class="btn btn-success"><a href="/starks/services/index.html">Services</a></button>
+            <button class="btn btn-success"><a href="/starks/services/index.php">Services</a></button>
             <button class="btn btn-success"><a href="/starks/booknow.php">Book now</a> </button>
         </div>
     </div>
